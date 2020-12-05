@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  app:
+    container_name: marketshopapi_utp2
+    image:  marketshopapi-img_utp2
+    build: ./
+    ports:
+      - "8080:8080"
+    deploy:  
+      restart_policy:  
+        condition: on-failure

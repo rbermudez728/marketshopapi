@@ -3,6 +3,8 @@ package com.edu.utp.marketshopapi.model.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class ShopListProduct {
@@ -11,8 +13,12 @@ public class ShopListProduct {
 	@GeneratedValue
 	private Integer shopListProductId;
 
+	@ManyToOne()
+	@JoinColumn(name="shoplist_id")
 	private ShopList shopList;
 
+	@ManyToOne()
+	@JoinColumn(name="product_id")
 	private Product product;
 
 	private Integer cantidad;

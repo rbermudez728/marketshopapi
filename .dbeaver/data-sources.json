@@ -1,0 +1,30 @@
+{
+	"folders": {},
+	"connections": {
+		"h2_embedded-1761c06c4da-4c19ec6267863a54": {
+			"provider": "generic",
+			"driver": "h2_embedded",
+			"name": "marketshopdb",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"database": "mem:marketshopdb",
+				"url": "jdbc:h2:mem:marketshopdb",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false
+		}
+	}
+}
